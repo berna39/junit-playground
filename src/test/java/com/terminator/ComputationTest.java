@@ -11,4 +11,10 @@ class ComputationTest {
         Computation computation = new Computation();
         assertEquals(5, computation.addition(3, 2));
     }
+
+    @Test
+    void redTest(){
+        Computation computation = new Computation();
+        assertNotEquals(6, computation.addition(3, 2));
+    }
 }
