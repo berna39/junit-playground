@@ -15,7 +15,7 @@ class MyArraysTest {
     }
 
     @AfterAll
-    void tearDown() {
+    static void tearDown() {
         System.out.println("Closing the Testing session");
     }
 
