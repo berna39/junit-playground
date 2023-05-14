@@ -17,7 +17,6 @@ public class ConditionalTest {
         assertEquals(2, 2);
     }
 
-
     @Test
     void assumption(){
         Boolean imCool = true;
