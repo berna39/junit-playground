@@ -4,6 +4,9 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// By default, an instance of MyArraysTest class will be created before the execution of each method
+// If I want It to be created one I should just add @TestInstance annotation with
+// TestInstance.Lifecycle.PER_CLASS parameter
 class MyArraysTest {
 
     Ninja ninja = new Ninja();
