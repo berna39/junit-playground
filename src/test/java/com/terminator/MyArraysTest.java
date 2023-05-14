@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 // By default, an instance of MyArraysTest class will be created before the execution of each method
 // If I want It to be created one I should just add @TestInstance annotation with
-// TestInstance.Lifecycle.PER_CLASS parameter
+// TestInstance.Lifecycle.PER_CLASS parameter and remove static methods
 class MyArraysTest {
 
     Ninja ninja = new Ninja();
@@ -33,7 +33,15 @@ class MyArraysTest {
     }
 
     @Test
+    @DisplayName("Testing the squad method")
     void getSquad() {
         assertArrayEquals(new String[]{"Itachi", "Deisara", "Nagato", "Yahiko"}, ninja.getSquad());
+    }
+
+    @Test
+    @DisplayName("A disabled test")
+    @Disabled // This test will be skipped
+    void doSomething(){
+        assertEquals(1, 2);
     }
 }
