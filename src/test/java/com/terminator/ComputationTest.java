@@ -11,13 +11,13 @@ class ComputationTest {
     @DisplayName("Testing addition")
     void testAddition(){
         Computation computation = new Computation();
-        assertEquals(5, computation.addition(3, 2));
+        assertEquals(5, computation.addition(3, 2), "the excepted result is 5");
     }
 
     @Test
     @DisplayName("Red Testing addition")
     void redTest(){
         Computation computation = new Computation();
-        assertNotEquals(6, computation.addition(3, 2));
+        assertNotEquals(6, computation.addition(3, 2), "the excepted result is 5");
     }
 }
